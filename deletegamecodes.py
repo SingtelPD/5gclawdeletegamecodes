@@ -57,4 +57,4 @@ if submit:
         st.write(f"Coupon code {i} has been deleted from the CMS system.")
 
     num_codes_to_delete = num_codes_to_delete-1
-    st.success(f"{num_codes_to delete} codes have been added to the CMS system.")
+    st.success(f"{num_codes_to_delete} codes have been added to the CMS system.")
