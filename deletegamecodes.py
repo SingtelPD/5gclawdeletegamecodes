@@ -7,6 +7,8 @@ import streamlit as st
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions
 
 options = Options()
 options.headless = True
@@ -45,6 +47,9 @@ if submit:
     coupon_codes = web.find_element("xpath", '/html/body/div/div/main/div/div[1]/button[3]')
     coupon_codes.click()
     time.sleep(1)
+    
+    #define wait
+    wait = WebDriverWait(driver, 20)
 
     #enter coupon codes within range
     for i in range (num_codes_to_delete):
