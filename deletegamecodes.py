@@ -49,7 +49,7 @@ if submit:
     time.sleep(1)
     
     #define wait
-    wait = WebDriverWait(driver, 20)
+    wait = WebDriverWait(web, 20)
 
     #enter coupon codes within range
     for i in range (num_codes_to_delete):
