@@ -28,7 +28,7 @@ if submit:
     st.info("Running. Please do NOT click on the button again.")
 
     #convert start_num and end_num to integer
-    num_codes_to_delete = int(num_codes_to_delete)+1
+    num_codes_to_delete = int(num_codes_to_delete)
 
     web = webdriver.Chrome(options=options)
     web.get(url)
@@ -53,13 +53,14 @@ if submit:
 
     #enter coupon codes within range
     for i in range (num_codes_to_delete):
+        current_coupon_code = web.find_element("xpath", '/html/body/div/div/main/div/div[2]/div/table/tbody/tr[1]/td[3]')
         delete_button = web.find_element("xpath", '/html/body/div/div/main/div/div[2]/div/table/tbody/tr[1]/td[1]/input')
         delete_button.click()
         time.sleep(1)
         wait.until(expected_conditions.alert_is_present())
         alert = web.switch_to.alert.accept()
         time.sleep(1)
-        st.write(f"Coupon code {i} has been deleted from the CMS system.")
+        st.write(f"Coupon code {current_coupon_code} has been deleted from the CMS system.")
 
     num_codes_to_delete = num_codes_to_delete-1
     st.success(f"{num_codes_to_delete} codes have been added to the CMS system.")
