@@ -53,7 +53,7 @@ if submit:
 
     #enter coupon codes within range
     for i in range (num_codes_to_delete):
-        current_coupon_code = web.find_element("xpath", '/html/body/div/div/main/div/div[2]/div/table/tbody/tr[1]/td[3]')
+        current_coupon_code = web.find_element("xpath", '/html/body/div/div/main/div/div[2]/div/table/tbody/tr[1]/td[3]'.getText())
         delete_button = web.find_element("xpath", '/html/body/div/div/main/div/div[2]/div/table/tbody/tr[1]/td[1]/input')
         delete_button.click()
         time.sleep(1)
