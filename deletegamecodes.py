@@ -62,4 +62,4 @@ if submit:
         time.sleep(1)
         st.write(f"Coupon code {current_coupon_code} has been deleted from the CMS system.")
 
-    st.success(f"{num_codes_to_delete} codes have been added to the CMS system.")
+    st.success(f"{num_codes_to_delete} codes have been deleted from the CMS system.")
