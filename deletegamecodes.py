@@ -22,7 +22,7 @@ form = st.form("range_form")
 username = form.text_input("Please enter the CMS username")
 password = form.text_input("Please enter the CMS password")
 num_codes_to_delete = form.text_input("Enter the number of codes to delete")
-submit = form.form_submit_button("Add coupon codes to CMS")
+submit = form.form_submit_button("Delete coupon codes from CMS")
 
 if submit:
     st.info("Running. Please do NOT click on the button again.")
