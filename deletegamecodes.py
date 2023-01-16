@@ -2,7 +2,6 @@
 url = "https://fsm.sg.formulasquare.com/fsm_api/wawaji_cms/"
 #==================================
 
-package getText
 import time
 import streamlit as st
 from selenium import webdriver
