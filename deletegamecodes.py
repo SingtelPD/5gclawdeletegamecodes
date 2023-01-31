@@ -14,7 +14,7 @@ options = Options()
 options.headless = True
 
 
-st.title("❌ Delete game codes")
+st.title("❌🕹️ Delete game codes")
 st.write("Please use the form below to delete the game codes in the system.")
 st.write("Note: You can only delete the X latest game codes")
 
